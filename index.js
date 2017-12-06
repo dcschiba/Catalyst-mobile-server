@@ -26,7 +26,7 @@ db.devices = new Datastore();
 
 // initialize express
 const app = express();
-app.use((req, res, next) => {
+app.use('/notification', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static('client'));
+app.use('/client', express.static('client'));
 
 const port = 3000;
 app.listen(port, () => {
