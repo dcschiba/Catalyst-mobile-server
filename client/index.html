@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Catalyst Push</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <link rel="stylesheet" href="./app.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="WebPush">
+    <h1>CatalystMobile Push</h1>
+    <form id="topForm" method="post" action="#">
+      <dl>
+        <dt>
+          <label for="text-title">Device</label>
+        </dt>
+        <dd>
+          <select id="device" name="uuid"></select>
+        </dd>
+        <dt>
+          <label for="text-title">Title</label>
+        </dt>
+        <dd>
+          <input type="text" id="text-title" name="text-title" />
+        </dd>
+        <dt>
+          <label for="text-body">Message</label>
+        </dt>
+        <dd>
+          <input type="text" id="text-body" name="text-body" />
+        </dd>
+        <dt>
+          <label for="text-path">Page</label>
+        </dt>
+        <dd>
+          <input type="radio" name="radio-path" value="/"> Top画面
+          <input type="radio" name="radio-path" value="app/top"> コンテンツ一覧画面
+          <input type="radio" name="radio-path" value="app/main"> マップ画面
+        </dd>
+        <dt>
+          <label for="text-contents">Contents</label>
+        </dt>
+        <dd>
+          <input type="text" id="text-contents" name="text-contents" />
+          <br />ex) compass,amedas
+        </dd>
+      </dl>
+      <button id="post" type="button">Send</button>
+    </form>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="./app.js"></script>
+</body>
+
+</html>
