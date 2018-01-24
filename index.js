@@ -147,6 +147,7 @@ app.post('/notification/send', (req, res) => {
       title,
       message,
       path = '',
+      contents = '',
     } = req.body;
 
     let payload;
@@ -156,6 +157,7 @@ app.post('/notification/send', (req, res) => {
           title,
           message,
           path,
+          contents,
         },
       };
     } else if (platform === 'iOS') {
@@ -166,6 +168,7 @@ app.post('/notification/send', (req, res) => {
         },
         data: {
           path,
+          contents,
         },
       };
     } else {
