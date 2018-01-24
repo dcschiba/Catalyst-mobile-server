@@ -35,7 +35,7 @@
           <label for="text-path">Page</label>
         </dt>
         <dd>
-          <input type="radio" name="radio-path" value="/"> Top画面
+          <input type="radio" name="radio-path" value="/" checked="checked"> Top画面
           <input type="radio" name="radio-path" value="app/top"> コンテンツ一覧画面
           <input type="radio" name="radio-path" value="app/main"> マップ画面
         </dd>
@@ -43,8 +43,19 @@
           <label for="text-contents">Contents</label>
         </dt>
         <dd>
-          <input type="text" id="text-contents" name="text-contents" />
-          <br />ex) compass,amedas
+          <select id="contents" name="select-contents" disabled="disabled">
+            <option value="gfs">GPV(GFS)</option>
+            <option value="radar">Radar</option>
+            <option value="jp10ten">WX_WNI_JP_10Ten_Report</option>
+            <option value="waveblend">有義波高、波向</option>
+            <option value="hilofront">High Low Front</option>
+            <option value="disasterreport">DisasterReport</option>
+            <option value="livecamera">Live Camera</option>
+            <option value="jmawarn">JMA Warn</option>
+            <option value="lightning">雷</option>
+            <option value="amedas">AMeDAS</option>
+            <option value="compasshour">COMPASS (Hour)</option>
+          </select>
         </dd>
       </dl>
       <button id="post" type="button">Send</button>
